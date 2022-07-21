@@ -16,7 +16,7 @@ const TodoTask = require("./models/TodoTask");
 //connection to db
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
   console.log("Connected to db!");
-  app.listen(3000, () => console.log("Server Up and running"));
+  app.listen(3000, () => console.log("Server Up and running on Port", 3000));
 });
 
 // GET METHOD
@@ -64,5 +64,3 @@ app.route("/remove/:id").get((req, res) => {
     res.redirect("/");
   });
 });
-
-app.listen(5000, () => console.log("Server Up and running"));
