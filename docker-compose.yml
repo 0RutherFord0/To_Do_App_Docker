@@ -8,8 +8,8 @@ services:
     restart: always
     ports:
       - 2717:27017
-    volumes:
-      - mongo_db:/data/db
+#     volumes:
+#       - mongo_db:/data/db
 
   #nodejs API Services
   api:
